@@ -1,6 +1,9 @@
 import { createApp } from 'vue';
 import { Loader } from '@googlemaps/js-api-loader';
 
+import '@fontsource/roboto';
+import '@fontsource/material-icons';
+
 import '~/style.css';
 
 import App from '~/App.vue';

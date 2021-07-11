@@ -27,6 +27,8 @@
         "vue-tsc": "^0.2.0"
     },
     "dependencies": {
+        "@fontsource/material-icons": "^4.5.0",
+        "@fontsource/roboto": "^4.5.0",
         "@googlemaps/js-api-loader": "^1.12.1",
         "axios": "^0.21.1",
         "vue": "^3.1.4"
