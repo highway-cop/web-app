@@ -33,6 +33,8 @@
         "@material/mwc-button": "^0.22.1",
         "@material/mwc-circular-progress": "^0.22.1",
         "@material/mwc-icon-button": "^0.22.1",
+        "@material/mwc-list": "^0.22.1",
+        "@material/mwc-menu": "^0.22.1",
         "@material/mwc-textfield": "^0.22.1",
         "@material/mwc-top-app-bar": "^0.22.1",
         "axios": "^0.21.1",
