@@ -19,7 +19,7 @@
             </Dialog>
         </mwc-top-app-bar>
 
-        <GoogleMap :lat="-25" :lng="-50" ref="map"></GoogleMap>
+        <GoogleMap map-id="77e24214140f9918" :lat="-25" :lng="-50" ref="map"></GoogleMap>
     </div>
     <LoadingOverlay></LoadingOverlay>
 </template>

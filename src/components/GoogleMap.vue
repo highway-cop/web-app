@@ -19,7 +19,10 @@ export default defineComponent({
         zoom: {
             type: Number,
             default: 8
-        }
+        },
+        mapId: {
+            type: String
+        },
     },
     setup() {
         const map = ref<google.maps.Map>();
@@ -31,6 +34,7 @@ export default defineComponent({
         const element = this.$refs['map'] as HTMLElement;
 
         this.map = new google.maps.Map(element, {
+            mapId: this.mapId,
             center: {
                 lat: this.lat,
                 lng: this.lng
