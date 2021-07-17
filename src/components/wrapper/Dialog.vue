@@ -3,6 +3,7 @@
         <slot name="activator" v-bind:on="{ click }"></slot>
         <mwc-dialog
             :open="open"
+            class="space-y-2"
             @closing.self="close"
             :style="{ '--mdc-dialog-min-width': minWidth }"
         >
