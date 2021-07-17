@@ -10,7 +10,7 @@ const axios = Axios.create({
 
 class Service {
 
-    public async getByCity(name: string): Promise<google.maps.LatLng[]> {
+    public async getByCity(name: string): Promise<road.domain.AccidentByCityResponse[]> {
         const { data: markers } = await axios
             .get('/accidents/city', {
                 params: { name }

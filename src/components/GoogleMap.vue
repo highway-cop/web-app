@@ -39,7 +39,7 @@ export default defineComponent({
         });
     },
     methods: {
-        addMarker(position: google.maps.LatLng) {
+        addMarker(position: google.maps.LatLngLiteral) {
             this.markers.push(
                 new google.maps.Marker({ position, map: this.map })
             );
