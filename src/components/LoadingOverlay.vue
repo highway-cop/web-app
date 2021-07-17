@@ -1,10 +1,12 @@
 <template>
-    <div
-        v-if="overlay"
-        class="overlay absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-90"
-    >
-        <mwc-circular-progress indeterminate density="8"></mwc-circular-progress>
-    </div>
+    <transition name="overlay">
+        <div
+            v-if="overlay"
+            class="z-100 absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-90"
+        >
+            <mwc-circular-progress indeterminate density="8"></mwc-circular-progress>
+        </div>
+    </transition>
 </template>
 
 <script lang="ts">
@@ -23,8 +25,14 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
-div.overlay {
-    z-index: 100;
+<style lang="scss">
+.overlay-enter-active,
+.overlay-leave-active {
+    @apply transition-opacity duration-500;
+}
+
+.overlay-enter,
+.overlay-leave-to {
+    @apply opacity-0;
 }
 </style>
