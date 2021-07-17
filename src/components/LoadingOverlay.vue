@@ -2,7 +2,7 @@
     <transition name="overlay">
         <div
             v-if="overlay"
-            class="z-100 absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-90"
+            class="z-100 absolute top-0 left-0 w-screen h-screen flex justify-center items-center bg-black bg-opacity-90"
         >
             <mwc-circular-progress indeterminate density="8"></mwc-circular-progress>
         </div>
