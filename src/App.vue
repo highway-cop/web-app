@@ -14,7 +14,7 @@
                 <Select class="w-full" label="Município" :items="cities" v-model="city"></Select>
 
                 <template v-slot:action:0="{ close }">
-                    <mwc-button @click="close(); search();">Aplicar</mwc-button>
+                    <mwc-button @click="search().then(close)">Aplicar</mwc-button>
                 </template>
             </Dialog>
         </mwc-top-app-bar>
@@ -53,7 +53,7 @@ export default defineComponent({
         search() {
             this.$overlay(true);
 
-            this.$service.getByCity(this.city)
+            return this.$service.getByCity(this.city)
                 .then(markers => {
                     const map = this.$refs['map'] as InstanceType<typeof GoogleMap>;
 
