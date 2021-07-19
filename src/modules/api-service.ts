@@ -10,10 +10,19 @@ const axios = Axios.create({
 
 class Service {
 
-    public async getByCity(name: string): Promise<road.domain.AccidentByCityResponse[]> {
+    public async getByCity(name: string): Promise<road.domain.AccidentProjection[]> {
         const { data: markers } = await axios
             .get('/accidents/city', {
                 params: { name }
+            });
+
+        return markers;
+    }
+
+    public async getNearBy(lng: number, lat: number, range: number): Promise<road.domain.AccidentProjection[]> {
+        const { data: markers } = await axios
+            .get('/accidents/near', {
+                params: { lng, lat, range }
             });
 
         return markers;
