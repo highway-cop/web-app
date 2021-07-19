@@ -17,7 +17,19 @@ const loader = new Loader({
     libraries: []
 });
 
-loader.load().then(() => {
+function load() {
+    return loader.load().then(() =>
+        window.dispatchEvent(new Event('app-ready'))
+    );
+}
+
+if (window.flutter_inappwebview) {
+    window.addEventListener('flutterInAppWebViewPlatformReady', load);
+} else {
+    load();
+}
+
+window.addEventListener('app-ready', () => {
     const app = createApp(App);
 
     app.config.globalProperties.$events = events;
