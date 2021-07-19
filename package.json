@@ -14,7 +14,7 @@
     },
     "homepage": "https://github.com/highway-cop/wep-app#readme",
     "devDependencies": {
-        "@highway-cop/road-domain": "0.0.1",
+        "@highway-cop/road-domain": "^0.0.2",
         "@types/bson": "^4.0.4",
         "@types/google.maps": "^3.45.6",
         "@types/node": "^16.0.1",
