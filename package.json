@@ -39,6 +39,7 @@
         "@material/mwc-list": "^0.22.1",
         "@material/mwc-menu": "^0.22.1",
         "@material/mwc-select": "^0.22.1",
+        "@material/mwc-slider": "^0.22.1",
         "@material/mwc-textfield": "^0.22.1",
         "@material/mwc-top-app-bar": "^0.22.1",
         "axios": "^0.21.1",
